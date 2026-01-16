@@ -1,4 +1,5 @@
 import express from "express";
+import upload from "../middlewares/upload.middleware.js";
 import {
   registerInternship,
   getAllInternships
@@ -6,7 +7,12 @@ import {
 
 const router = express.Router();
 
-router.post("/register", registerInternship);
+router.post(
+  "/register",
+  upload.single("resume"),
+  registerInternship
+);
+
 router.get("/", getAllInternships);
 
 export default router;

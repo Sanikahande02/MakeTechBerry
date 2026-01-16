@@ -5,31 +5,32 @@ const internshipSchema = new mongoose.Schema(
     fullName: {
       type: String,
       required: true,
-      trim: true
+      trim: true,
     },
     email: {
       type: String,
       required: true,
-      lowercase: true
+      lowercase: true,
     },
     phone: {
       type: String,
-      required: true
+      required: true,
     },
     domain: {
       type: String,
-      required: true
+      required: true,
     },
     duration: {
       type: String,
-      required: true
+      required: true,
     },
     college: {
-      type: String
+      type: String,
     },
     resume: {
-      type: String // file path (later)
-    }
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
