@@ -115,7 +115,7 @@ export default function App() {
                   Quick Links
                 </h3>
                 <ul className="space-y-3">
-                  {['Home', 'About Us', 'Services', 'Training', 'Contact'].map((item) => (
+                  {['Home', 'About Us', 'Services', 'Training', 'Contact','Testimonials'].map((item) => (
                     <li key={item}>
                       <a href="/" className={`transition-colors duration-300 font-medium text-base ${themeClasses.link}`}>
                         {item}

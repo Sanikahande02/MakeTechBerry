@@ -32,13 +32,13 @@ export default function Navbar() {
 	};
 
 	return (
-		<header className="bg-[#FCF8F1] bg-opacity-30 dark:bg-gray-900 dark:bg-opacity-95 transition-colors duration-300">
-			<div className="px-4 mx-auto sm:px-6 lg:px-8">
+		<header className="sticky top-0 z-50 bg-[#FCF8F1] bg-opacity-80 backdrop-blur-md dark:bg-gray-900 dark:bg-opacity-90 transition-colors duration-300">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16 lg:h-20">
 					{/* Logo */}
 					<div className="flex-shrink-0">
 						<a href="#" className="flex">
-							<img className="w-auto h-18" src="/logo-no_bg.png" alt="Logo" />
+							<img className="w-auto h-20" src="/logo-no_bg.png" alt="Logo" />
 						</a>
 					</div>
 
@@ -153,7 +153,13 @@ export default function Navbar() {
    							 href="#contact"
     						className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
   						>
-    					Contact us
+    					Contact
+  						</a>
+						<a
+   							 href="#stestimonials"
+   							 className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+ 						 >
+   						 Testimonials
   						</a>
 				</div>
 
@@ -221,6 +227,7 @@ export default function Navbar() {
 								{ name: "Services", href: "#" },
 								{ name: "Training", href: "#" },
 								{ name: "Contact", href: "#" },
+								{ name: "Testimonials", href: "#" },
 							].map((item, index) => (
 								<motion.a
 									key={item.name}
@@ -229,7 +236,7 @@ export default function Navbar() {
 									animate={{ x: 0, opacity: 1 }}
 									exit={{ x: -20, opacity: 0 }}
 									transition={{ delay: index * 0.1, duration: 0.2 }}
-									className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+									className="text-base font-medium text-black dark:text-gray-200 transition-all duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
 								>
 									{item.name}
 								</motion.a>
