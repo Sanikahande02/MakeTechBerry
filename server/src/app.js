@@ -6,6 +6,7 @@ import internshipRoutes from "./routes/internship.routes.js";
 import projectRoutes from "./routes/project.routes.js";
 import path from "path";
 import { fileURLToPath } from "url";
+import authRoutes from "./routes/auth.routes.js";
 
 dotenv.config();
 connectDB();
@@ -21,6 +22,8 @@ app.use(express.json());
 app.use("/api/internships", internshipRoutes);
 app.use("/api/projects", projectRoutes);  
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.use("/api/auth", authRoutes);
+
 
 app.get("/", (req, res) => {
   res.send("MakeTechBerry Server Running 🚀");

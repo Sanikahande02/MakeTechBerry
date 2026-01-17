@@ -4,6 +4,7 @@ import {
   registerInternship,
   getAllInternships
 } from "../controllers/internship.controller.js";
+import protect from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
@@ -14,5 +15,7 @@ router.post(
 );
 
 router.get("/", getAllInternships);
+// Admin-only
+router.get("/", protect, getAllInternships);
 
 export default router;
