@@ -120,32 +120,43 @@ export default function Navbar() {
 					</div>
 
 					{/* Desktop Menu */}
+					{/* Desktop Menu */}
 					<div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
 						<a
-							href="#"
-							className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
-						>
-							Features
-						</a>
+   							 href="#home"
+   							 className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+ 						 >
+   						 Home
+  						</a>
 						<a
-							href="#"
-							className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
-						>
-							Solutions
-						</a>
+   							 href="#about"
+   							 className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+ 						 >
+   						 About us
+  						</a>
+
+  						<a
+   							 href="#services"
+   							 className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+ 						 >
+   						 Services
+  						</a>
+ 		
+
+  						<a
+    						href="#training"
+    						className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+  						>
+    					Training
+  						</a>
 						<a
-							href="#"
-							className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
-						>
-							Resources
-						</a>
-						<a
-							href="#"
-							className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
-						>
-							Pricing
-						</a>
-					</div>
+   							 href="#contact"
+    						className="text-base text-black dark:text-gray-200 transition-all duration-200 hover:text-opacity-80 dark:hover:text-white"
+  						>
+    					Contact us
+  						</a>
+				</div>
+
 
 					{/* CTA Button & Dark Toggle */}
 					<div className="hidden lg:flex items-center space-x-4">
@@ -205,10 +216,11 @@ export default function Navbar() {
 					>
 						<div className="flex flex-col space-y-4 px-4 pt-2 pb-4 text-center">
 							{[
-								{ name: "Features", href: "#" },
-								{ name: "Solutions", href: "#" },
-								{ name: "Resources", href: "#" },
-								{ name: "Pricing", href: "#" },
+								{ name: "Home", href: "#" },
+								{ name: "About Us", href: "#" },
+								{ name: "Services", href: "#" },
+								{ name: "Training", href: "#" },
+								{ name: "Contact", href: "#" },
 							].map((item, index) => (
 								<motion.a
 									key={item.name}
