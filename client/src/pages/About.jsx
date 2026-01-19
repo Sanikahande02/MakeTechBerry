@@ -10,6 +10,7 @@ import {
   Award, 
   BookOpen 
 } from "lucide-react";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,7 +75,8 @@ const About = () => {
     setCurrentSlide((prev) => (prev - 1 + cards.length) % cards.length);
 
   return (
-    <div className="font-['Poppins'] overflow-x-hidden bg-white">
+    <AnimatedBackground>
+    <div className="font-['Poppins'] overflow-x-hidden ">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&display=swap');
         .font-volkhov { font-family: 'Volkhov', serif; }
@@ -102,25 +104,15 @@ const About = () => {
 
       {/* ================= HERO / STORY HEADER ================= */}
       <section className="x relative overflow-visible">
-        <div
-  className="absolute inset-0"
-  style={{ backgroundColor: "#f093fb " }}
-/>
-
-        <div className="absolute inset-0 bg-black/20" />
-        
-        {/* Gradient Overlay for Depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#f093fb ] opacity-10 z-0" />
-
         {/* Content Wrapper */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-60 text-center">
-          <p className={`text-[#DF6951] font-bold uppercase tracking-widest text-sm mb-4 animate-fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <p className={`text-[#DF6951] font-bold text-xl uppercase tracking-widest  mb-4 animate-fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Who We Are
           </p>
-          <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 font-volkhov animate-fade-in-up stagger-1 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h1 className={`text-4xl md:text-6xl font-bold text-black mb-6 font-volkhov animate-fade-in-up stagger-1 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Unleashing Innovation
           </h1>
-          <p className={`text-gray-200 max-w-2xl mx-auto leading-relaxed text-lg animate-fade-in-up stagger-2 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <p className={`text-gray-600 max-w-2xl mx-auto leading-relaxed text-lg animate-fade-in-up stagger-2 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Building careers and shaping the future of technology. We are more than a tech company; we are the architects of the digital landscape.
           </p>
         </div>
@@ -194,12 +186,12 @@ const About = () => {
       <div className="hidden md:block h-64"></div>
 
       {/* ================= OUR VALUES SECTION ================= */}
-      <section className="bg-white py-16 md:py-24 lg:py-32 overflow-visible">
+      <section className="py-16 md:py-24 lg:py-32 overflow-visible">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-[#DF6951] font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-4">
+          <p className="text-[#DF6951] font-bold  uppercase tracking-[0.2em] text-[10px] md:text-xl mb-4">
             Our Principles
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#181E4B] mb-6 font-volkhov">
+          <h2 className="text-3xl md:text-7xl font-bold text-[#181E4B] mb-6 font-volkhov">
             Our Values
           </h2>
           <p className="text-gray-500 mb-12 md:mb-20 max-w-xl mx-auto text-sm md:text-base font-medium px-4">
@@ -242,6 +234,7 @@ const About = () => {
          <div className="text-2xl md:text-3xl font-black tracking-tighter">K ALIIO</div>
       </div>
     </div>
+    </AnimatedBackground>
   );
 };
 

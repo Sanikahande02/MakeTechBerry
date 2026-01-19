@@ -64,3 +64,12 @@ body {
 .slide-in-from-top-4 {
   animation: slideInFromTop 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
