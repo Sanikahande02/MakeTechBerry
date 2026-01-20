@@ -10,6 +10,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import Internships from "./pages/admin/Internships";
 import Projects from "./pages/admin/Projects";
 import Reports from "./pages/admin/Reports";
+import Contact from "./pages/Contact";
 
 function AppContent() {
 	const location = useLocation();
@@ -24,6 +25,7 @@ function AppContent() {
 				<Route path="/about" element={<About />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/admin/login" element={<Login />} />
+				<Route path="/contact" element={<Contact />} />
 				<Route
 					path="/admin/dashboard"
 					element={
